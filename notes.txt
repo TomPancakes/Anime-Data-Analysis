@@ -1,0 +1,8 @@
+MAL API
+
+-genre popularity
+-episode count vs score
+-controversial anime (standard deviation?)
+-seasonal trends
+
+etc, etc. Lots can be looked into. 
