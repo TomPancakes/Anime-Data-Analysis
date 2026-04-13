@@ -6,3 +6,5 @@ MAL API
 -seasonal trends
 
 etc, etc. Lots can be looked into. 
+
+No longer implementing database. This is split into other project.  
