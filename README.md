@@ -5,7 +5,8 @@ By TomPancakes
 This project uses explores anime trends (Ratings, popularity) using data from the GraphQL AniList API. https://docs.anilist.co/
 
 ## Tools used
-**Anilist API** API powered by GraphQL query language
+
+**Anilist API** - API powered by GraphQL query language
 **Requests** - Library to make API requests.
 **Pandas** - Data Manipulation.
 **Matplotlib** - Data graphing.
