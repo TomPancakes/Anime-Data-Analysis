@@ -29,10 +29,15 @@ def data_init():
     }
     '''
 
-    variables = {'page': 1, 'perPage': 50}
+    #API won't allow 1000 anime to be grabbed at once, so must be looped over
+    all_anime = [] #set up list to collect all responses. 
 
-    # Make the HTTP Api request
-    response = requests.post(url, json={'query': query, 'variables': variables})
-    return response
+    for page in range(1, 21): #20 pages = 1000 anime (50 per) 
+        variables = {'page': page, 'perPage': 50}
+        response = requests.post(url, json={'query': query, 'variables': variables}) #make api request
+        all_anime.extend(response.json()['data']['Page']['media'])
+        print(f"Fetched page {page}/20")
 
-data_init()
+    return all_anime #List of 1000 dicts. 
+
+fetched_data = data_init()
