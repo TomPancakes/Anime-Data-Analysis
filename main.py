@@ -49,4 +49,7 @@ def data_init():
 
     return all_anime #List of 1000 dicts. 
 
-fetched_data = data_init()
+# grabs further data of a specifically requested anime?
+def get_user_scores(entry):
+    pass
+
