@@ -4,7 +4,8 @@
 #Import libraries
 import requests
 
-def data_init():    
+def data_init():  
+    print("Attempting to grab api data")  
     #grab data from api. (snippet )
     url = 'https://graphql.anilist.co'
 
@@ -24,6 +25,7 @@ def data_init():
                 status
                 format
                 popularity
+                genres
             }
         }
     }
@@ -37,6 +39,13 @@ def data_init():
         response = requests.post(url, json={'query': query, 'variables': variables}) #make api request
         all_anime.extend(response.json()['data']['Page']['media'])
         print(f"Fetched page {page}/20")
+
+    #Since title is returned as a dict (e.g., {English: "Name"}), must replace with str value
+    for anime in all_anime:
+        if anime['title']:
+            anime['title'] = anime['title']['english']
+        else:
+            anime['title'] = None
 
     return all_anime #List of 1000 dicts. 
 
