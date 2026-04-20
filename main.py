@@ -1,5 +1,6 @@
 #Main Python Script
 #Responsible for setting up API call
+#NOTE: This script is ONLY called if there is no anime.json present in the project folder
 
 #Import libraries
 import requests

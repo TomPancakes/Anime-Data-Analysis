@@ -2,20 +2,25 @@
 By TomPancakes
 
 ## Summary: 
-This project uses explores anime trends (Ratings, popularity) using data from the GraphQL AniList API. https://docs.anilist.co/
+Are old or new anime more highly rated? Which genres are most popular? What about movies vs series? 
+This projects explores those very questions using data from the GraphQL AniList API. https://docs.anilist.co/
+
 
 ## Tools used
-
 - **Anilist API** - API powered by GraphQL query language
 - **Requests** - Library to make API requests.
 - **Pandas** - Data Manipulation.
 - **Matplotlib** - Data graphing.
 
 ## Results/findings
-yes. Results were indeed found. I think. 
+yes. Results were indeed found. I think.
+- R value of 0.34 between popularity & score. Not as high as you'd expect. While the most popular shows did tend to be higher in the ratings, there are also many highly rated shows with lower popularity.
+- etc
 
 ## How to run
-Running it usually helps. 
+- Install dependencies: pip install requests pandas matplotlib jupyter
+- Open anime_data.analysis.ipynb and run all cells in order
+- NOTE: Not necessary to run, but the program will use the local .json data if available rather than gathering new API data via main.py. If you want the program to fetch more recent data, simply delete the JSON file from the project folder then run all cells. 
 
 ## limitations.
 - Data limited to only top 1000 popular entries. (whole database is 20,000 approx) Niche entries excluded.
