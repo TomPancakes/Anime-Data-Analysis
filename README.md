@@ -13,9 +13,10 @@ This projects explores those very questions using data from the GraphQL AniList 
 - **Matplotlib** - Data graphing.
 
 ## Results/findings
-yes. Results were indeed found. I think.
 - R value of 0.34 between popularity & score. Not as high as you'd expect. While the most popular shows did tend to be higher in the ratings, there are also many highly rated shows with lower popularity.
-- etc
+- Average scores were highest in earliest and most recent time periods, with notable dip around 2013-2020.
+- Movies, music & special format entries fare the best. TV & TV-shorts fare the worst.
+- Episode count does not seem to significantly impact ratings.
 
 ## How to run
 - Install dependencies: pip install requests pandas matplotlib jupyter
